@@ -1,5 +1,6 @@
 package com.lucasangelo.todosimple.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -39,6 +40,7 @@ public class User {
     @Size(groups = CreateUser.class, min = 2, max = 100)
     private String username;
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Column(name = "password", length = 60, nullable = false)
     @NotNull(groups = {CreateUser.class, UpdateUser.class})
     @NotEmpty(groups = {CreateUser.class, UpdateUser.class})
