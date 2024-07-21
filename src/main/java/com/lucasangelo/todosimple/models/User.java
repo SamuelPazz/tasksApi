@@ -18,11 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-/*
-import java.util.ArrayList;
-import java.util.List;
-*/
-
 @Entity
 @Table(name = User.TABLE_NAME)
 public class User {
