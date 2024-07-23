@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
+import java.util.List;
 
 @Service
 public class TaskService {
@@ -24,6 +25,11 @@ public class TaskService {
         Optional<Task> task = this.taskRepository.findById(id);
         return task.orElseThrow(() -> new RuntimeException(
                 "Task not found! Id: " + id + ", Type: " + Task.class.getName()));
+    }
+
+    public List<Task> findAllByUserId(Long UserId) {
+        List<Task> tasks = this.taskRepository.findByUser_Id(UserId);
+        return tasks;
     }
 
     @Transactional
