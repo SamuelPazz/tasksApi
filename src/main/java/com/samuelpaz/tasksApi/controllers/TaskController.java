@@ -55,7 +55,7 @@ public class TaskController {
                 .path("/{id}").buildAndExpand(obj.getId()).toUri();
         return ResponseEntity.created(uri).build();
     }
-
+    
     @PutMapping("/{id}")
     @Validated
     public ResponseEntity<Void> update(@Valid @RequestBody Task obj, @PathVariable Long id) {
