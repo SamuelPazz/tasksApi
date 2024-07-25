@@ -1,8 +1,8 @@
-package com.lucasangelo.todosimple.services;
+package com.samuelpaz.tasksApi.services;
 
-import com.lucasangelo.todosimple.models.User;
-import com.lucasangelo.todosimple.models.Task;
-import com.lucasangelo.todosimple.repositories.TaskRepository;
+import com.samuelpaz.tasksApi.models.User;
+import com.samuelpaz.tasksApi.models.Task;
+import com.samuelpaz.tasksApi.repositories.TaskRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

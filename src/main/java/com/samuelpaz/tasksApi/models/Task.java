@@ -1,4 +1,4 @@
-package com.lucasangelo.todosimple.models;
+package com.samuelpaz.tasksApi.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

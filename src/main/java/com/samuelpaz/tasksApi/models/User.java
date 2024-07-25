@@ -1,4 +1,4 @@
-package com.lucasangelo.todosimple.models;
+package com.samuelpaz.tasksApi.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;

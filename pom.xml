@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.1</version>
+		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.lucasangelo</groupId>
-	<artifactId>todosimple</artifactId>
+	<groupId>com.samuelpaz</groupId>
+	<artifactId>tasksApi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>todosimple</name>
-	<description>Spring Boot API for To Do App</description>
+	<name>tasksApi</name>
+	<description>Spring Boot API for TasksApi</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -55,12 +55,21 @@
 			<scope>runtime</scope>
 			<version>8.3.0</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 			<version>3.3.1</version>
 		</dependency>
+
 	</dependencies>
 
 	<build>

@@ -1,8 +1,7 @@
-package com.lucasangelo.todosimple.services;
+package com.samuelpaz.tasksApi.services;
 
-import com.lucasangelo.todosimple.models.User;
-import com.lucasangelo.todosimple.repositories.UserRepository;
-
+import com.samuelpaz.tasksApi.models.User;
+import com.samuelpaz.tasksApi.repositories.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +21,6 @@ public class UserService {
                 "User not found! Id:" + id + ", Type: " + User.class.getName()
         ));
     }
-
 
     @Transactional
     public User create(User obj) {
@@ -47,5 +45,4 @@ public class UserService {
                     "It's not possible to delete as there are related entities!");
         }
     }
-
 }
