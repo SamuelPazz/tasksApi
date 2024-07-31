@@ -3,6 +3,8 @@ package com.samuelpaz.tasksApi.services;
 import com.samuelpaz.tasksApi.models.User;
 import com.samuelpaz.tasksApi.models.Task;
 import com.samuelpaz.tasksApi.repositories.TaskRepository;
+import com.samuelpaz.tasksApi.services.exceptions.DataBindingViolationException;
+import com.samuelpaz.tasksApi.services.exceptions.ObjectNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +25,7 @@ public class TaskService {
     @Transactional
     public Task findById(Long id) {
         Optional<Task> task = this.taskRepository.findById(id);
-        return task.orElseThrow(() -> new RuntimeException(
+        return task.orElseThrow(() -> new ObjectNotFoundException(
                 "Task not found! Id: " + id + ", Type: " + Task.class.getName()));
     }
 
@@ -53,7 +55,7 @@ public class TaskService {
         try {
             this.taskRepository.deleteById(id);
         } catch (Exception e) {
-             throw new RuntimeException(
+             throw new DataBindingViolationException(
                      "It's not possible to delete as there are related entities!");
         }
     }
